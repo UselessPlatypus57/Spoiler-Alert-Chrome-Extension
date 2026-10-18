@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  body{font:13px system-ui,sans-serif;width:300px;margin:0;padding:12px;color:#222}
+  h1{font-size:15px;margin:0 0 8px}
+  .meter{padding:8px;border-radius:6px;background:#f2f2f2;margin-bottom:10px}
+  input[type=text]{width:100%;box-sizing:border-box;padding:5px;margin-bottom:4px}
+  button{cursor:pointer}
+  li{display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-bottom:1px solid #eee}
+  li small{color:#777;display:block}
+  ul{list-style:none;padding:0;margin:8px 0}
+  label{display:block;margin:6px 0}
+</style></head>
+<body>
+  <h1>🛡️ Spoiler Shield</h1>
+  <div class="meter" id="meter">Checking this page…</div>
+  <label><input type="checkbox" id="enabled"> Enabled</label>
+  <label>Sensitivity
+    <select id="sens">
+      <option value="25">Strict (blur more)</option>
+      <option value="40">Normal</option>
+      <option value="60">Relaxed (blur less)</option>
+    </select>
+  </label>
+  <input type="text" id="name" placeholder="Show or game (e.g. Severance)">
+  <input type="text" id="kw" placeholder="Extra keywords: characters, places (comma-separated)">
+  <button id="add">Add to my list</button>
+  <ul id="list"></ul>
+  <script src="popup.js"></script>
+</body></html>

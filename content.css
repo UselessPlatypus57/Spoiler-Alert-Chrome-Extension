@@ -1,0 +1,13 @@
+.ss-blur {
+  filter: blur(9px) saturate(0.6) !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  outline: 2px dashed rgba(220, 60, 60, 0.7);
+  outline-offset: 2px;
+  transition: filter 0.2s;
+}
+.ss-blur * { pointer-events: none !important; }
+.ss-revealed {
+  outline: 2px dashed rgba(130, 130, 130, 0.35);
+  outline-offset: 2px;
+}

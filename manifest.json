@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Spoiler Shield",
+  "version": "0.1.0",
+  "description": "Blur likely spoilers for the shows and games you're in the middle of, and rate how spoilery each page is.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "Spoiler Shield" }
+}
